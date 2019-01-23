@@ -118,5 +118,11 @@ namespace ShowroomBooking.Controllers
             return RedirectToAction("Index");
 
         }
+
+        public ActionResult Appointment(string i,string j)
+        {
+
+            return View();
+        }
     }
 }
