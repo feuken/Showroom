@@ -1,0 +1,111 @@
+﻿
+@model Vecka
+
+@{
+    ViewData["Title"] = "Booking";
+}
+
+@*<style>
+    table, th, td {
+        border: 1px solid black;
+    }
+
+    table {
+        border-collapse: collapse;
+        width: 20%;
+    }
+
+    td {
+        text-align: center;
+        height: 40px;
+    }
+
+    tr {
+        background-color: lightblue;
+        color: black;
+    }
+
+    td:hover {
+        background-color: #267aa6;
+    }
+
+   
+</style>*@
+
+<h2>Booking</h2>
+
+
+<table style="width: 800px; height: 400px;">
+
+    <tr>
+        <td style="width: 160px;">V.4</td>
+
+    </tr>
+    <tr>
+        <td style="width: 160px;">Måndag</td>
+        <td style="width: 160px;">Tisdag</td>
+        <td style="width: 160px;">Onsdag</td>
+        <td style="width: 160px;">Torsdag</td>
+        <td style="width: 160px;">Fredag</td>
+    </tr>
+
+    @foreach (Dag dag in Model.Dagar)
+    {
+        @for (int j = 0; j < Model.Dagar[0].Tider.Count; j++)
+        {
+            <tr>
+                @for (int i = 0; i < Model.Dagar.Count; i++)
+                {
+                    
+                    <td style="width: 160px;">
+                        <button type="button" asp-controller="Booking" asp-action="Appointment" asp-route-id="">
+                            @(Model.Dagar[i].Tider[j].StartTime.ToShortTimeString() + "-" + Model.Dagar[i].Tider[j].EndTime.ToShortTimeString())
+                        </button>
+                    </td>
+                }
+            </tr>
+        }
+    }
+
+
+</table>
+
+
+
+
+
+
+    @*@for (int j = 0; j < Model.Dagar[0].Tider.Count; j++)
+    {
+        <tr>
+            @for (int i = 0; i < Model.Dagar.Count; i++)
+            {
+                <td style="width: 160px;">
+                    <button type="button" asp-controller="Booking" asp-action="Appointment" asp-route-id="@i" >
+                        @(Model.Dagar[i].Tider[j].StartTime.ToShortTimeString() + "-" + Model.Dagar[i].Tider[j].EndTime.ToShortTimeString())
+                    </button>
+                </td>
+            }
+        </tr>
+    }
+    </table>*@
+
+
+
+    @*<div class="row">
+        <div class="col-md-6">
+
+            <form method="post" asp-controller="Booking" asp-action="Booking">
+
+                <div class="form-group">
+                    <label asp-for="AppointSubject"></label>
+                    <input asp-for="AppointSubject" class="form-control" />
+                </div>
+
+
+
+                <div class="form-group">
+                    <input type="submit" value="Create" class="btn btn-success" />
+                </div>
+
+            </form>*@

@@ -1,0 +1,16 @@
+﻿@model List<Events>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Bookings</h2>
+
+<ul>
+    @foreach (var item in Model)
+    {
+        <li><h5>@item.EventStart - @item.EventEnd</h5></li>
+    }
+</ul>
+
+<a asp-controller="Booking" asp-action="Booking" class="btn btn-primary">Book</a>
+
