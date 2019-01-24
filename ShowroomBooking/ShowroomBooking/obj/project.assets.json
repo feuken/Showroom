@@ -12564,23 +12564,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\fefeu1\\.nuget\\packages\\": {},
+    "C:\\Users\\vivis1\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\fefeu1\\Documents\\GitHub\\Showroom\\ShowroomBooking\\ShowroomBooking\\ShowroomBooking.csproj",
+      "projectUniqueName": "C:\\Users\\vivis1\\Documents\\GitHub\\Showroom\\ShowroomBooking\\ShowroomBooking\\ShowroomBooking.csproj",
       "projectName": "ShowroomBooking",
-      "projectPath": "C:\\Users\\fefeu1\\Documents\\GitHub\\Showroom\\ShowroomBooking\\ShowroomBooking\\ShowroomBooking.csproj",
-      "packagesPath": "C:\\Users\\fefeu1\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\fefeu1\\Documents\\GitHub\\Showroom\\ShowroomBooking\\ShowroomBooking\\obj\\",
+      "projectPath": "C:\\Users\\vivis1\\Documents\\GitHub\\Showroom\\ShowroomBooking\\ShowroomBooking\\ShowroomBooking.csproj",
+      "packagesPath": "C:\\Users\\vivis1\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\vivis1\\Documents\\GitHub\\Showroom\\ShowroomBooking\\ShowroomBooking\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\fefeu1\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\vivis1\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
