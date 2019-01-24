@@ -100,3 +100,4 @@ C:\Users\fefeu1\Documents\GitHub\Showroom\ShowroomBooking\ShowroomBooking\obj\De
 C:\Users\fefeu1\Documents\GitHub\Showroom\ShowroomBooking\ShowroomBooking\obj\Debug\netcoreapp2.1\ShowroomBooking.dll
 C:\Users\fefeu1\Documents\GitHub\Showroom\ShowroomBooking\ShowroomBooking\obj\Debug\netcoreapp2.1\ShowroomBooking.pdb
 C:\Users\fefeu1\Documents\GitHub\Showroom\ShowroomBooking\ShowroomBooking\obj\Debug\netcoreapp2.1\ShowroomBooking.csproj.CopyComplete
+C:\Users\fefeu1\Documents\GitHub\Showroom\ShowroomBooking\ShowroomBooking\obj\Debug\netcoreapp2.1\ShowroomBooking.csprojAssemblyReference.cache
