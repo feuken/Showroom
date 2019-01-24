@@ -88,6 +88,7 @@ namespace ShowroomBooking.Controllers
 
             }
 
+
             if (dayOfWeek == 5)
             {
                 måndag.Datum = idag.Date.AddDays(-4);
@@ -97,8 +98,7 @@ namespace ShowroomBooking.Controllers
                 fredag.Datum = idag.Date;
 
             }
-
-
+            
 
 
             vecka1.Dagar = new List<Dag> { måndag, tisdag, onsdag, torsdag, fredag };
@@ -119,15 +119,15 @@ namespace ShowroomBooking.Controllers
             service.Url = new Uri("https://outlook.office365.com/EWS/Exchange.asmx");
 
 
-            //Appointment appointment = new Appointment(service);
-            //// Set the properties on the appointment object to create the appointment.
-            //appointment.Subject = request.AppointSubject;
-            //appointment.Start = DateTime.Now;//request.AppointStart;
-            //appointment.End = DateTime.Now.AddHours(1);//request.AppointEnd;
-            //appointment.Location = "Showroom";
-            //appointment.ReminderDueBy = DateTime.Now;
-            //// Save the appointment to your calendar.
-            //appointment.Save(SendInvitationsMode.SendToNone);
+            Appointment appointment = new Appointment(service);
+            // Set the properties on the appointment object to create the appointment.
+            appointment.Subject = request.Email;
+            appointment.Start = DateTime.Now;//request.AppointStart;
+            appointment.End = DateTime.Now.AddHours(1);//request.AppointEnd;
+            appointment.Location = "Showroom";
+            appointment.ReminderDueBy = DateTime.Now;
+            // Save the appointment to your calendar.
+            appointment.Save(SendInvitationsMode.SendToNone);
 
             
 
@@ -147,13 +147,15 @@ namespace ShowroomBooking.Controllers
 
             Appointment meeting = new Appointment(service);
             // Set the properties on the meeting object to create the meeting.
-            meeting.Subject = "Introduction of Cybercom Showroom";
-            meeting.Body = "Welcome to a introduction in the Cybercom Showroom!";
-            meeting.Start = request.AppointStart;
-            meeting.End = request.AppointEnd;
-            meeting.Location = "Showroom";
-            meeting.RequiredAttendees.Add(request.Email);
-            meeting.ReminderMinutesBeforeStart = 15;
+            meeting.Subject = "Team building exercise";
+            meeting.Body = "Let's learn to really work as a team and then have lunch!";
+            meeting.Start = DateTime.Now.AddDays(2);
+            meeting.End = meeting.Start.AddHours(4);
+            meeting.Location = "Conference Room 12";
+            meeting.RequiredAttendees.Add("Mack@contoso.com");
+            meeting.RequiredAttendees.Add("Sadie@contoso.com");
+            meeting.OptionalAttendees.Add("Magdalena@contoso.com");
+            meeting.ReminderMinutesBeforeStart = 60;
             // Save the meeting to the Calendar folder and send the meeting request.
             meeting.Save(SendInvitationsMode.SendToAllAndSaveCopy);
 
