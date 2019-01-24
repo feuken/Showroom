@@ -62,7 +62,7 @@
                            text=@(Model.Dagar[i].Tider[j].StartTime.ToShortTimeString() + "-" + Model.Dagar[i].Tider[j].EndTime.ToShortTimeString())>
                     </input>*@
                     <a href="Appointment?i=@i&j=@j ">
-                        <input type="button" value="Click Me" />
+                        <input type="button" value="@i" />
                     </a>
                 </td>
                 }
