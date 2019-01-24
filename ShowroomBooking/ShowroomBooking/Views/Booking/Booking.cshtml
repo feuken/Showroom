@@ -49,9 +49,7 @@
         <td style="width: 160px;">Fredag</td>
     </tr>
 
-    @foreach (Dag dag in Model.Dagar)
-    {
-        @for (int j = 0; j < Model.Dagar[0].Tider.Count; j++)
+     @for (int j = 0; j < Model.Dagar[0].Tider.Count; j++)
         {
             <tr>
                 @for (int i = 0; i < Model.Dagar.Count; i++)
@@ -62,13 +60,13 @@
                            text=@(Model.Dagar[i].Tider[j].StartTime.ToShortTimeString() + "-" + Model.Dagar[i].Tider[j].EndTime.ToShortTimeString())>
                     </input>*@
                     <a href="Appointment?i=@i&j=@j ">
-                        <input type="button" value="@i" />
+                        <input type="button" value=@(Model.Dagar[i].Tider[j].StartTime.ToShortTimeString() + "-" + Model.Dagar[i].Tider[j].EndTime.ToShortTimeString()) />
                     </a>
                 </td>
                 }
             </tr>
         }
-    }
+    
 
 
 </table>
